@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="Field" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1331.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Controller">
+  <children>
+    <LineChart fx:id="methodsChart" createSymbols="false" layoutX="257.0" layoutY="-1.0" prefHeight="331.0" prefWidth="1074.0">
+      <xAxis>
+        <NumberAxis side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis fx:id="Chart" side="LEFT" />
+      </yAxis>
+    </LineChart>
+    <TextField fx:id="x0" layoutX="81.0" layoutY="154.0" prefWidth="142.0" />
+    <TextField fx:id="y0" layoutX="81.0" layoutY="176.0" prefWidth="142.0" />
+    <TextField id="X" fx:id="maxX" layoutX="81.0" layoutY="198.0" prefWidth="142.0" />
+    <TextField id="N" fx:id="n" layoutX="81.0" layoutY="220.0" prefWidth="142.0" />
+    <ToggleButton fx:id="Compute" layoutX="103.0" layoutY="519.0" mnemonicParsing="false" onAction="#computation" prefHeight="31.999900000002526" prefWidth="122.0" text="Compute" />
+    <Label layoutX="54.0" layoutY="154.0" prefHeight="22.0" prefWidth="28.0" text="x0" />
+    <Label layoutX="54.0" layoutY="176.0" prefHeight="22.0" prefWidth="28.0" text="y0" />
+    <Label layoutX="54.0" layoutY="198.0" prefHeight="22.0" prefWidth="28.0" text="X" />
+    <Label layoutX="53.0" layoutY="220.0" prefHeight="22.0" prefWidth="28.0" text="N" />
+    <CheckBox fx:id="isExact" layoutX="75.0" layoutY="358.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="142.0" text="Exact" />
+    <CheckBox fx:id="isEuler" layoutX="75.0" layoutY="390.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="142.0" text="Euler" />
+    <CheckBox fx:id="isImprovedEuler" layoutX="75.0" layoutY="422.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="142.0" text="Improved Euler" />
+    <CheckBox fx:id="isRungeKutta" layoutX="75.0" layoutY="454.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="142.0" text="Runge-Kutta" />
+    <LineChart fx:id="errorsChart" createSymbols="false" layoutX="257.0" layoutY="332.0" prefHeight="331.0" prefWidth="543.0">
+      <xAxis>
+        <NumberAxis side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis id="Chart" side="LEFT" />
+      </yAxis>
+    </LineChart>
+    <Text layoutX="76.0" layoutY="124.0" scaleX="2.0356590321525645" scaleY="2.1270191399073153" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter initial values:" />
+    <Text layoutX="57.0" layoutY="338.0" scaleX="1.8071836988388223" scaleY="2.0019742084138263" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose methods:" />
+    <Text layoutX="500.0" layoutY="363.0" scaleX="2.3444086952480037" scaleY="1.7962311758320564" strokeType="OUTSIDE" strokeWidth="0.0" text="Errors' Plot" />
+    <Text layoutX="757.0" layoutY="28.0" scaleX="2.2492254325351113" scaleY="2.0022238719774204" strokeType="OUTSIDE" strokeWidth="0.0" text="Methods' Plot" />
+    <LineChart id="errorsChart" fx:id="approxChart" createSymbols="false" layoutX="788.0" layoutY="332.0" prefHeight="331.0" prefWidth="543.0">
+      <xAxis>
+        <NumberAxis side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis id="Chart" side="LEFT" />
+      </yAxis>
+    </LineChart>
+    <Text layoutX="1008.0" layoutY="363.0" scaleX="2.0749081272893855" scaleY="2.0124047459403243" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Approximation Error" />
+    <TextField id="T" fx:id="Ti" layoutX="81.0" layoutY="242.0" prefWidth="142.0" />
+    <Text layoutX="54.0" layoutY="257.0" scaleX="1.0" scaleY="1.191148127753304" strokeType="OUTSIDE" strokeWidth="0.0" text="Ti" />
+    <TextField fx:id="Tf" layoutX="81.0" layoutY="264.0" prefWidth="142.0" />
+    <Text layoutX="54.0" layoutY="280.0" scaleX="0.9999999998816819" scaleY="1.191148127753304" strokeType="OUTSIDE" strokeWidth="0.0" text="Tf" />
+  </children>
+</AnchorPane>
